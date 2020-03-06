@@ -1,0 +1,27 @@
+﻿@model TheHouseOfTheRisingBuns.Models.SignUp
+
+<div class="search-text">
+    <div class="container">
+        <div class="row text-center" style="margin:auto">
+
+            @*Sign up form*@
+            <div class="form margincenter">
+                <h2>SIGN UP TO OUR NEWSLETTER</h2>
+                <hr />
+                <div class="row">
+                    <div class="col-md-4">
+                        <form asp-action="MailingList" id="search-form" class="form-search form-horizontal" style="display:-webkit-inline-box;padding-left: 316px;width: 1010px;">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input asp-for="Email" type="text" class="input-search form-control form-group" placeholder="Email Address" />
+                            <input type="submit" value="SUBMIT" class="btn-search form-group" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

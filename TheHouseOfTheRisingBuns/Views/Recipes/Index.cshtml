@@ -1,0 +1,194 @@
+﻿@model IEnumerable<TheHouseOfTheRisingBuns.Models.Recipe>
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@{
+    ViewData["Title"] = "All Recipes";
+}
+
+@*welcome header*@
+<div class="jumbotron">
+    <h1 class="display-3">Recipes Library</h1>
+    <p class="lead">Welcome to the Recipes library! Just browse through our collection untill you find something you like then just click on the recipe to see more details</p>
+    <hr class="my-4">
+    @*only logged in users can see this link *@
+    @if (SignInManager.IsSignedIn(User))
+    {
+
+        <span class="lead">
+            <p>Why not add your own recipe to the collection, Just click the link below!</p>
+            <a asp-area="" asp-controller="Recipes" asp-action="Create" class="btn btn-primary btn-lg" role="button">Add a Recipe</a>
+        </span>
+    }
+    @*if not logged in they will see this*@
+    else
+    {
+
+        <span class="lead">
+            <p>Register for an account today and you can contribute to our vast library of recipes too! </p>
+            <a asp-area="" asp-controller="Account" asp-action="Register" class="btn btn-primary btn-lg" role="button">Register</a>
+        </span>
+    }
+</div>
+<hr />
+
+
+
+
+
+@*@foreach (var item in Model)
+    {*@
+@*new row*@
+
+@*<div class="card mb-3-">
+    <h3 class="card-header">@Html.DisplayFor(modelItem => item.Title)</h3>
+    <div class="card-body">
+        <h5 class="card-title">Serves:@Html.DisplayFor(modelItem => item.Servings)</h5>
+        <h5 class="card-title">Category:@Html.DisplayFor(modelItem => item.CategoryName.CategoryName)</h5>
+        <h6 class="card-subtitle text-muted">Cooking Time: @Html.DisplayFor(modelItem => item.Time)</h6>
+    </div>
+    <img style="width:50%" src="~/RecipeImages/@item.RecipeThumb" />
+    <div class="card-body">
+        <p class="card-text">Ingredients: @Html.DisplayFor(modelItem => item.Ingredients)</p>
+        <p class="card-text">Method: @Html.DisplayFor(modelItem => item.Method)</p>
+    </div>
+    <a asp-action="Details" asp-route-id="@item.ID">Details</a>*@
+
+@*Admin only*@
+
+@*@if (User.IsInRole("Admins"))
+            {
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            }
+            <ul class="list-group list-group-flush" style="color: #00bc8c;">
+
+                <li class="list-group-item">200g sugar</li>
+                <li class="list-group-item">200g butter</li>
+                <li class="list-group-item">4 eggs</li>
+                <li class="list-group-item">200g flour</li>
+                <li class="list-group-item">2tbsp cocoa powder</li>
+                <li class="list-group-item">2tbsp milk</li>
+            </ul>
+        </div>
+
+        <div class="card border-success mb-3" style="max-width: 20rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h4 class="card-title">Success card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    }*@
+<div class="row">
+    @foreach (var item in Model)
+    {
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card border-success mb-3" style="max-width: 20rem;">
+                <div class="card-header recipe-index-header">@Html.DisplayFor(modelItem => item.Title)</div>
+                <div class="card-body" style="    max-width: 315px;
+    min-height: 315px;">
+
+                    <a asp-action="Details" asp-route-id="@item.ID">
+                        <img style="width:100%; height:274px" src="~/RecipeImages/@item.RecipeThumb" />
+                    </a>
+                </div>
+                <div class="card-footer">
+                    @*Admin only*@
+
+                    @if (User.IsInRole("Admins"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit     |</a>
+                        <a asp-action="Delete" asp-route-id="@item.ID">      Delete</a>
+                    }
+                </div>
+            </div>
+        </div>
+
+
+        @*Admin only*@
+
+        @*@if (User.IsInRole("Admins"))
+            {
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>*@
+        @*}*@
+    }
+
+</div>
+
+
+
+
+
+
+
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecipeThumb)
+
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Servings)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingredients)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Method)
+            </th>
+            <th>
+                <p>Category</p>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    <img style="width:50%" src="~/RecipeImages/@item.RecipeThumb" />
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Servings)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ingredients)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Method)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName.CategoryName)
+                </td>
+                <td>*@
+
+@*<a asp-action="Details" asp-route-id="@item.ID">Details</a>*@
+
+@*Admin only*@
+
+@*@if (User.IsInRole("Admins"))
+    {
+        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>*@
+@*}*@
+@*</td>
+                </tr>
+            }
+        </tbody>
+    </table>*@

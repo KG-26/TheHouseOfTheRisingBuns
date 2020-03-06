@@ -1,0 +1,34 @@
+﻿@using TheHouseOfTheRisingBuns.Views.Manage
+@inject SignInManager<ApplicationUser> SignInManager
+@{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
+}
+
+@*colum for help menu*@
+<div class="col-md-12">
+    <ul class="list-group help-group">
+        <div class="faq-list list-group nav nav-tabs">
+           
+            <a class="list-group-item @ManageNavPages.IndexNavClass(ViewContext)"  asp-action="Index" >Profile</a>
+            <a class="list-group-item @ManageNavPages.ChangePasswordNavClass(ViewContext)" asp-action="ChangePassword" > Change Password</a>
+         @if (hasExternalLogins)
+         {
+
+            <a  class="list-group-item @ManageNavPages.ExternalLoginsNavClass(ViewContext)" asp-action="ExternalLogins"> External Logins</a>
+         }
+            <a  class="list-group-item @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)"asp-action="TwoFactorAuthentication"> Two-Factor Authentication</a>
+           
+        </div>
+    </ul>
+</div>
+
+@*<ul class="nav nav-pills nav-stacked">
+    <li class="@ManageNavPages.IndexNavClass(ViewContext)"><a asp-action="Index">Profile</a></li>
+    <li class="@ManageNavPages.ChangePasswordNavClass(ViewContext)"><a asp-action="ChangePassword">Password</a></li>
+    @if (hasExternalLogins)
+    {
+        <li class="@ManageNavPages.ExternalLoginsNavClass(ViewContext)"><a asp-action="ExternalLogins">External logins</a></li>
+    }
+    <li class="@ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)"><a asp-action="TwoFactorAuthentication">Two-factor authentication</a></li>
+</ul>*@
+

@@ -1,0 +1,157 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1 class="display-3">Welcome</h1>
+    <h3 class="lead">At The House of The Rising Buns we are dedicated to providing you with a variety of recipes that you can cook at home! All with the help of our step by step instuctions! Click recipes to start browsing or try adding a recipe of your own!</h3>
+    <hr class="my-4">
+    <h5>Register for an account today and you can contribute to our vast library of recipes too! </h5>
+    <h3 class="lead">
+        <a asp-area="" asp-controller="Account" asp-action="Register" class="btn btn-primary btn-lg" role="button">Register</a>
+    </h3>
+</div>
+<div class="container-fluid home-container">
+    
+    <div class="row"></div>
+    <div class="col-4"></div>
+    
+    @*new row*@
+    <div class="row">
+        @*box 1*@
+        <div class="col-sm-12 col-md-6 recipe-display">
+            <div class="card mb-3-">
+                <h3 class="card-header">Chocolate Cake</h3>
+                <div class="card-body">
+                    <h5 class="card-title">Serves: 1</h5>
+                    <h6 class="card-subtitle text-muted">Cooking Time: 1Hr</h6>
+                </div>
+                <img style="height: 400px; width: 100%; display: block;" src="~/images/cake.jpg" alt="Card image">
+                <div class="card-body">
+                    <p class="card-text">In a large bowl, beat all the cake ingredients and a pinch of salt together until pale. Divide the mixture between the prepared tins. Bake for 20 mins or until a skewer inserted into the centre of the cake comes out clean. Leave to cool in the tin for 10 mins, then turn out onto a wire rack to cool completely.</p>
+                </div>
+        <ul class="list-group list-group-flush" style="color: #00bc8c;">
+        <li class="list-group-item">200g sugar</li>
+        <li class="list-group-item">200g butter</li>
+        <li class="list-group-item">4 eggs</li>
+          <li class="list-group-item">200g flour</li>
+         <li class="list-group-item">2tbsp cocoa powder</li>
+         <li class="list-group-item">2tbsp milk</li>
+    </ul>
+
+
+                <div class="card-footer text-muted">
+                    4 days ago
+                </div>
+            </div>
+        </div>
+        @*box 2*@
+        <div class="col-sm-12 col-md-6 recipe-display">
+            <div class="card mb-3-">
+                <h3 class="card-header">Chicken Curry</h3>
+                <div class="card-body">
+                    <h5 class="card-title">Serves: 4</h5>
+                    <h6 class="card-subtitle text-muted">Cooking Time: 2Hr</h6>
+                </div>
+                <img style="height: 400px; width: 100%; display: block;" src="~/images/curry.jpg" alt="Card image">
+                <div class="card-body">
+                    <p class="card-text">Add the chicken and brown it on all sides for 6–8 minutes over a medium heat. Remove and set aside on a plate.
+Cook the onions in the pan for 5 minutes until golden brown, stirring regularly. Add the chicken for 5-8mins. Add the curry paste and peas and cook, stirring, for 1 minute. Serve with rice and corriander</p>
+                </div>
+                <ul class="list-group list-group-flush" style="color: #00bc8c;">
+                    <li class="list-group-item">200g Chicken</li>
+                    <li class="list-group-item">3 Onions</li>
+                    <li class="list-group-item">1 Jar Curry Paste</li>
+                    <li class="list-group-item">Cooked Rice</li>
+                    <li class="list-group-item">Peas</li>
+                    <li class="list-group-item">Corriander</li>
+                </ul>
+
+
+                <div class="card-footer text-muted">
+                    10 days ago
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="padding:20px"></div>
+        <div class="col-4"></div>
+</div>
+        @*new row*@
+        <div class="row">
+            @*box 1*@
+            <div class="col-sm-12 col-md-6 recipe-display">
+                <div class="card mb-3-">
+                    <h3 class="card-header">Pancakes</h3>
+                    <div class="card-body">
+                        <h5 class="card-title">Serves: 2</h5>
+                        <h6 class="card-subtitle text-muted">Cooking Time: 1/2Hr</h6>
+                    </div>
+                    <img style="height: 400px; width: 100%; display: block;" src="~/images/mainbanner3.jpg" alt="Card image">
+                    <div class="card-body">
+                        <p class="card-text">In a large bowl, beat all the ingredients and a pinch of salt together until pale. Divide the mixture between the prepared tins. Bake for 20 mins or until a skewer inserted into the centre of the cake comes out clean. Leave to cool in the tin for 10 mins, then turn out onto a wire rack to cool completely.</p>
+                    </div>
+                    <ul class="list-group list-group-flush" style="color: #00bc8c;">
+                        <li class="list-group-item">200g sugar</li>
+                        <li class="list-group-item">200g butter</li>
+                        <li class="list-group-item">4 eggs</li>
+                        <li class="list-group-item">200g flour</li>
+                        <li class="list-group-item">Baking Powder</li>
+                        <li class="list-group-item">2tbsp milk</li>
+                    </ul>
+
+
+                    <div class="card-footer text-muted">
+                        1 day ago
+                    </div>
+                </div>
+            </div>
+            @*box 2*@
+            <div class="col-6 recipe-display">
+                <div class="card mb-3-">
+                    <h3 class="card-header">Ceasar Salad</h3>
+                    <div class="card-body">
+                        <h5 class="card-title">Serves: 1</h5>
+                        <h6 class="card-subtitle text-muted">Cooking Time: 10Mins</h6>
+                    </div>
+                    <img style="height: 400px; width: 100%; display: block;" src="~/images/Salad.jpg" alt="Card image">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Wash and lay out lettuce leaves on paper towels and pat dry.
+                            Cut lettuce into 1 inch strips and place in a large mixing bowl.
+                            Add chicken, cheese, green onions, and toss.
+                            Cover lettuce with Parmesan cheese and salt and pepper.
+                            Mix in Caesar Ranch dressing until lettuce is nicely coated.
+                            Add croutons to individual salad bowls when serving so they won't get soggy.
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush" style="color: #00bc8c;">
+                        <li class="list-group-item">Cooked Chicken</li>
+                        <li class="list-group-item">Spring Onions</li>
+                        <li class="list-group-item">Lettuce</li>
+                        <li class="list-group-item">Parmesan</li>
+                        <li class="list-group-item">Ceasar Sauce</li>
+                        <li class="list-group-item">Croutons</li>
+                    </ul>
+
+
+                    <div class="card-footer text-muted">
+                        10 days ago
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding:20px"></div>
+            <div class="col-4"></div>
+
+
+
+            <div class="row" style="padding:20px"></div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+
+@*Newsletter*@
+@await Html.PartialAsync("/Views/Shared/MailingList.cshtml")
+   
+

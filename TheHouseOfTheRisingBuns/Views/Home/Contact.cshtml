@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Contact Us!";
+}
+
+
+<div class="jumbotron">
+    <h1 class="display-3">@ViewData["Title"]</h1>
+    <p class="lead">@ViewData["Message"]</p>
+    <hr class="my-4">
+    <h5>If you are having any trouble using the site dont forget to check out our help page! </h5>
+    <h5 class="lead">
+        <a  asp-area="" asp-controller="Home" asp-action="Help"  class="btn btn-primary btn-lg" role="button">Help Page</a>
+
+    </h5>
+</div>
+@*container*@
+<div class="container-fluid">
+    @*new row*@
+    <div class="row">
+        @*colum*@
+        <div class=" col-md-5" style="padding:50px,0px.30px,30px; font-size:20px" >
+           
+            <h2><b style=" padding-bottom:20px;color:rebeccapurple;font-size: 30px; ">The House of The Rising Buns </b></h2>
+            <address style="position:center">
+                SERC<br/>
+                1 Castle Park Road<br />
+                Bangor, BT20 123<br />
+
+                <p>Phone:  028 91234123</p>
+
+            </address>
+
+            <h3 style="font-size: 20px">
+                <strong>Support:</strong> <a href="">Admin@thehouseoftherisingbuns.com</a><br />
+               
+            </h3>
+        </div>
+        @*colum*@
+        <div class=" col-md-7" style="padding-left:30px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1154.0154494663439!2d-5.663388636490011!3d54.65628116699964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48619e1ea2a9c507%3A0xd2ec0d09428bbfc2!2sSERC+Bangor!5e0!3m2!1sen!2suk!4v1526376255205"
+                    width="600" height="400" frameborder="0" style="border:6px solid #CECECE;float:right;" allowfullscreen></iframe> 
+             @*title="contact map" width="600" height="400" style="border:6px solid #CECECE;float:right;">*@
+        </div>
+     </div>
+    @*end of row*@
+</div>
+@*end of container*@
+
+@*Newsletter*@
+@await Html.PartialAsync("/Views/Shared/MailingList.cshtml")

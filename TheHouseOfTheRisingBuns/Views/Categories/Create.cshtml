@@ -1,0 +1,46 @@
+﻿@model TheHouseOfTheRisingBuns.Models.Category
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+    @*welcome header*@
+    <div class="jumbotron">
+        <h1 class="display-3">Add Categories</h1>
+        <h5 class="lead">Enter a new category below to add it to the database. These categories will be displyed in a dropdown box to our users when they upload recipes onto the site. Just hit the Create button to save!</h5>
+        <hr class="my-4">
+        <h5>If you need to edit any entries just click here!</h5>
+        <h5 class="lead">
+            <a asp-area="" asp-controller="Categories" asp-action="Index" class="btn btn-primary btn-lg" role="button">View and Edit Categories</a>
+
+        </h5>
+    </div>
+    <hr />
+
+    @*Start of form*@
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">  
+                    <input asp-for="CategoryName" class="form-control" placeholder="Enter a New Category" />
+                    <span asp-validation-for="CategoryName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default btn btn-primary btn-lg" role="button" />
+                    <a asp-action="Index" class="btn btn-primary btn-lg" role="button">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

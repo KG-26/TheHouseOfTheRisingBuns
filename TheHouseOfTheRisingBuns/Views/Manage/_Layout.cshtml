@@ -1,0 +1,29 @@
+﻿@{ 
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron">
+    <h1 class="display-3">Manage your account</h1>
+    <p class="lead">@ViewData["Message"]</p>
+    <hr class="my-4">
+    <h4>Change your account settings here <br/> If you are having any trouble using the site dont forget to check out our help page! </h4>
+    <p class="lead">
+        <a asp-area="" asp-controller="Home" asp-action="Help" class="btn btn-primary btn-lg" role="button">Help Page</a>
+
+    </p>
+</div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            @await Html.PartialAsync("_ManageNav")
+        </div>
+        <div class="col-md-8">
+            @RenderBody()
+        </div>
+    </div>
+
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}
+        

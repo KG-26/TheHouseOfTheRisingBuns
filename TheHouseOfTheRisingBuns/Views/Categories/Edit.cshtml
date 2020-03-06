@@ -1,0 +1,46 @@
+﻿@model TheHouseOfTheRisingBuns.Models.Category
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+    @*welcome header*@
+    <div class="jumbotron">
+        <h1 class="display-3">Edit This Category</h1>
+        <p class="lead">Make any required changes then hit save when you are done!</p>
+        <hr class="my-4">
+
+    </div>
+    <hr />
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="CategoryName" class="control-label"></label>
+                <input asp-for="CategoryName" class="form-control" />
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default btn btn-primary btn-lg" role="button" />
+                <a asp-action="Index" class="btn btn-primary btn-lg" role="button">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+﻿/*body*/
+body {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/*nav bar css for shared layout*/
+h1.title {
+    text-align: center;
+}
+
+.a.navbar-brand {
+    color: #00bc8c;
+}
+
+.logins {
+    padding: 26px;
+}
+
+.banner-container {
+    position: relative;
+    text-align: center;
+    color: #00bc8c;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Footer CSS for shared layout*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+.search-text {
+    margin-top: 50px;
+    background-color: #272d33;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+    .search-text .input-search {
+        height: 45px;
+        width: 40%;
+        padding-left: 20px;
+        color: #333;
+    }
+
+    .search-text .btn-search {
+        background: #00bc8c;
+        font-family: Roboto;
+        border: none;
+        color: #FFF;
+        height: 45px;
+        width: 80px;
+    }
+
+    .search-text h4 {
+        color: #FFF;
+        font-weight: 700;
+    }
+
+footer {
+    background-color: #375a7f;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo img {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 30px;
+    border-radius: 20px 20px 20px 20px;
+    width: 85%;
+}
+
+.footer-links h1 {
+    color: #00bc8c;
+    font-weight: bold;
+    padding: 75px,10px,10px,100px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+.footer-links
+{
+/*padding: 70px,10px,10px,100px;*/
+padding-top:60px;
+align-content:center;
+/*padding-left:250px;*/
+}
+
+.address li a, .menu li a {
+    color: #FFF;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.address li, .menu li {
+    margin: 10px 0px;
+    list-style: none;
+}
+
+    .address li a:hover, .menu li a:hover {
+        color: #00bc8c;
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+    }
+
+.address .fa {
+    color: #da3e44;
+    margin-right: 10px;
+    font-size: 18px;
+}
+.menu
+{
+    padding:0px;
+}
+
+/*recipes index page*/
+
+#titleimg {
+    width: 100%;
+}
+
+/*Help page/*/
+
+
+.list-group.help-group {
+    margin-bottom: 20px;
+    padding-left: 0;
+    margin: 0;
+}
+    
+i.mdi
+
+{
+    margin-right: 5px;
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+}
+
+&:hover {
+    background-color: #f6f6f6;
+}
+
+&.active {
+    background-color: #f6f6f6;
+    font-weight: 700;
+    color: rgba(0,0,0,.87);
+}
+
+&:last-of-type {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom: 0;
+}
+
+
+.tab-content.panels-faq {
+    padding: 0;
+    border: 0;
+}
+
+.panel.panel-help {
+    box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15);
+    padding-bottom: 0;
+    border-radius: 2px;
+    overflow: hidden;
+    /*background-color: #fff;*/
+    margin: 0 0 16px;
+}
+
+a [href^="#"], a[href^="#"]:hover, a[href^="#"]:focus {
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.panel-heading {
+    /*background-color: #f6f6f6;*/
+    padding: 0 16px;
+    line-height: 48px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    /*color: rgba(0,0,0,.87);*/
+}
+
+h2 {
+    margin: 0;
+    padding: 14px 0 14px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.panel-body {
+    /*background-color: #fff;*/
+    border-top: 1px solid #ddd;
+    border-radius: 2px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    margin-top: 0;
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+&:last-of-type {
+    margin: 0;
+}
+
+.help h4 {
+    color: whitesmoke;
+}
+
+
+/*Home, index css*/
+
+.recipe-display {
+    float: left;
+    width: 50%; /* The width is 50%, by default */
+}
+.home-container
+{
+    padding-top:20px;
+    background-color:cadetblue;
+}
+
+.margincenter {
+    margin: 0 auto;
+}
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+    .recipe-display {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
+
+/*details page recipes*/
+
+.details-header {
+    font-size: 9.875rem;
+    text-align: center;
+    background-color: rgba(32, 85, 115, 0.98);
+}
+.card-title {
+    color: #00bc8c;
+
+}
+.card-header {
+    color: cornflowerblue;
+
+}
+.details-box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#recipe-img-details {
+  
+    border: 7px solid white;
+    padding-left: 0px;
+    height: 478px;
+    width: 1072px;
+    display: block;
+    position: absolute;
+    opacity: 0.45;
+}
+.img-details-box
+{
+    padding-left:30px;
+}
+
+/*recipe create/**/
+
+.recipe-create-form
+{
+                       padding-left:40px;
+  }
+
+/*recipes index*/
+.recipe-index-header
+{
+    font-size:210%;
+}

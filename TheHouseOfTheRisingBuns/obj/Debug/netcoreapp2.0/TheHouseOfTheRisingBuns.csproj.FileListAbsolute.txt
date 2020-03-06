@@ -1,0 +1,36 @@
+C:\Users\GIL11174082\source\repos\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.deps.json
+C:\Users\GIL11174082\source\repos\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.runtimeconfig.json
+C:\Users\GIL11174082\source\repos\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.runtimeconfig.dev.json
+C:\Users\GIL11174082\source\repos\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.dll
+C:\Users\GIL11174082\source\repos\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.pdb
+C:\Users\GIL11174082\source\repos\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.csprojResolveAssemblyReference.cache
+C:\Users\GIL11174082\source\repos\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.csproj.CoreCompileInputs.cache
+C:\Users\GIL11174082\source\repos\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\GIL11174082\source\repos\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.AssemblyInfoInputs.cache
+C:\Users\GIL11174082\source\repos\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.AssemblyInfo.cs
+C:\Users\GIL11174082\source\repos\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.dll
+C:\Users\GIL11174082\source\repos\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.pdb
+M:\Past Projects\unit 4 ass 2 complete\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.deps.json
+M:\Past Projects\unit 4 ass 2 complete\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.runtimeconfig.json
+M:\Past Projects\unit 4 ass 2 complete\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.runtimeconfig.dev.json
+M:\Past Projects\unit 4 ass 2 complete\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.dll
+M:\Past Projects\unit 4 ass 2 complete\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.pdb
+M:\Past Projects\unit 4 ass 2 complete\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.csprojAssemblyReference.cache
+M:\Past Projects\unit 4 ass 2 complete\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.csproj.CoreCompileInputs.cache
+M:\Past Projects\unit 4 ass 2 complete\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+M:\Past Projects\unit 4 ass 2 complete\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.AssemblyInfoInputs.cache
+M:\Past Projects\unit 4 ass 2 complete\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.AssemblyInfo.cs
+M:\Past Projects\unit 4 ass 2 complete\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.dll
+M:\Past Projects\unit 4 ass 2 complete\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.pdb
+C:\Users\KGilchrist\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.deps.json
+C:\Users\KGilchrist\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.runtimeconfig.json
+C:\Users\KGilchrist\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.runtimeconfig.dev.json
+C:\Users\KGilchrist\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.dll
+C:\Users\KGilchrist\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\bin\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.pdb
+C:\Users\KGilchrist\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.csprojAssemblyReference.cache
+C:\Users\KGilchrist\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.csproj.CoreCompileInputs.cache
+C:\Users\KGilchrist\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\KGilchrist\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.AssemblyInfoInputs.cache
+C:\Users\KGilchrist\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.AssemblyInfo.cs
+C:\Users\KGilchrist\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.dll
+C:\Users\KGilchrist\TheHouseOfTheRisingBuns\TheHouseOfTheRisingBuns\obj\Debug\netcoreapp2.0\TheHouseOfTheRisingBuns.pdb

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<TheHouseOfTheRisingBuns.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @*welcome header*@
+    <div class="jumbotron">
+        <h1 class="display-3">Categories Library</h1>
+        <p class="lead">Welcome to the Categories library! Click Edit if you want to change any categories!</p>
+        <hr class="my-4">
+
+
+            <span class="lead">
+                <p>Need to add a new Category? Click the link below!</p>
+                <a asp-area="" asp-controller="Categories" asp-action="Create" class="btn btn-primary btn-lg" role="button">Add a Category</a>
+            </span>
+   
+    </div>
+    <hr />
+
+<table class="table">
+    
+    <thead class="panel-header">
+        
+            <tr>
+                
+                    <th class="bg-primary panel-header" style="height:47px; padding:10px">
+                        @Html.DisplayNameFor(model => model.CategoryName)
+                    </th>
+                    <th class="bg-primary panel-header" style="height:47px; padding:10px">Actions</th>
+             
+             </tr>
+        
+</thead>
+        
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> 
+                @*<a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

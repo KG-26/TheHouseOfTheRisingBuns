@@ -1,0 +1,133 @@
+﻿@model TheHouseOfTheRisingBuns.Models.Recipe
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+@*<div class="container-fluid" style="margin:20px;padding:20px;padding-bottom:60px; background-color:rebeccapurple;">*@
+
+   
+
+@*welcome header*@
+<div class="jumbotron">
+    <h1 class="display-3">@Html.DisplayFor(model => model.Title)</h1>
+   @if (User.IsInRole("Admins"))
+   {
+        <span class="lead">
+            <p>Psssst Admins! Click the appropriate links below if you want to edit or delete this post!</p>
+            <a asp-area="" asp-controller="Recipes" asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-primary btn-lg" role="button">Edit</a>
+            <a asp-area="" asp-controller="Recipes" asp-action="Delete" asp-route-id="@Model.ID" class="btn btn-primary btn-lg" role="button">Delete</a>
+        
+        </span>
+    }
+</div>
+<hr />
+
+    @*box 1*@
+    <div class="col-12 details-box" style="padding-top:30px">
+
+
+    
+        <div class="row">
+            <div class="col-md-12  img-details-box"><img id="recipe-img-details" src="~/RecipeImages/@Html.DisplayFor(model => model.RecipeThumb)" alt="RecipeThumb"></div>
+            @*non functioning code for dynamic images*@
+            @*<img style="height: 400px; width: 100%; display: block;" src="@Html.DisplayFor(model => model.RecipeThumb)" alt="RecipeThumb">*@
+            <div class="col-md-12">
+                <div class="card-body">
+
+                    <h3 class="card-title"><b><u> @Html.DisplayNameFor(model => model.Servings):</u></b> </h3>
+                    <p class="card-text">@Html.DisplayFor(model => model.Servings)</p>
+
+                    <h3 class="card-title"><b><u> Cooking @Html.DisplayNameFor(model => model.Time):</u></b> </h3>
+                    <p class="card-text">@Html.DisplayFor(model => model.Time)</p>
+
+                    <h3 class="card-title"><b><u> @Html.DisplayNameFor(model => model.Ingredients)</u></b></h3>
+                    <p class="card-text">  @Html.DisplayFor(model => model.Ingredients)</p>
+
+                    <h3 class="card-title"><b><u>  @Html.DisplayNameFor(model => model.Method)</u></b></h3>
+                    <p class="card-text">@Html.DisplayFor(model => model.Method)</p>
+
+                    <a asp-area="" asp-controller="Recipes" asp-action="Index" class="btn btn-primary btn-lg" role="button">Back to All Recipes</a>
+                </div>
+            </div>
+    </div>
+    @*<div class="row">*@
+</div>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+
+            @*<div class="col-md-4 card-footer"></div>
+        @if (User.IsInRole("Admins"))
+        {
+            <div class="col-md-4 card-footer">
+
+                <a asp-area="" asp-controller="Recipes" asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-primary btn-lg" role="button">Edit This Recipe</a>
+            </div>
+        }
+        </div>*@
+ 
+@*</div>*@
+
+
+
+
+
+
+
+
+
+@*<div>
+    <h4>Recipe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecipeThumb)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecipeThumb)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Servings)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Servings)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ingredients)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ingredients)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Method)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Method)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>*@

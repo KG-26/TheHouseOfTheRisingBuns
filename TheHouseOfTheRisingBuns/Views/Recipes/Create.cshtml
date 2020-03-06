@@ -1,0 +1,78 @@
+﻿@model TheHouseOfTheRisingBuns.Models.Recipe
+@{
+    ViewData["Title"] = "Create";
+}
+
+@*welcome header*@
+<div class="jumbotron">
+    <h1 class="display-3">Add a New Recipe</h1>
+    <h5 class="lead">Enter a new Recipe below to add it to the database. Just fill in all the fields and then hit the Create button to save!</h5>
+    @if (User.IsInRole("Admins"))
+    {
+        <hr class="my-4">
+        <h5>Pssst Admin, If you need to edit any existing entries just click here!</h5>
+        <h5 class="lead">
+            <a asp-area="" asp-controller="Recipes" asp-action="Index" class="btn btn-primary btn-lg" role="button">View and Edit Recipes</a>
+
+        </h5>
+    }
+</div>
+<hr />
+
+
+<hr />
+<div class="row">
+    <div class="col-md-5 recipe-create-form">
+        <form asp-action="Create" asp-controller="Recipes" enctype="multipart/form-data">
+       
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CategoryName" class="control-label">Category</label>
+                <select asp-for="CategoryID" class="form-control" asp-items="ViewBag.CategoryID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Time" class="control-label"></label>
+                <input asp-for="Time" class="form-control" />
+                <span asp-validation-for="Time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Servings" class="control-label"></label>
+                <input asp-for="Servings" class="form-control" />
+                <span asp-validation-for="Servings" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredients" class="control-label"></label>
+                <input asp-for="Ingredients" class="form-control" />
+                <span asp-validation-for="Ingredients" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Method" class="control-label"></label>
+                <input asp-for="Method" class="form-control" />
+                <span asp-validation-for="Method" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecipeThumb" class="control-label">Recipe Image</label><br/>
+                @*<div><img style="width:50%" src="~/RecipeImages/@Html.Raw(Model.RecipeThumb)"/></div>*@
+                <span asp-validation-for="RecipeThumb" class="text-danger"></span>
+                <input type="file" name="files" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default btn btn-primary btn-lg" role="button" />
+                <a asp-action="Index" class="btn btn-primary btn-lg" role="button">Back to List</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

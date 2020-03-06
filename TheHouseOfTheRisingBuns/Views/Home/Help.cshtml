@@ -1,0 +1,254 @@
+﻿@{
+    ViewData["Title"] = "Need a bit of Help? Look no further!";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Help</title>
+</head>
+<body>
+    @*Welcome header*@
+    <div class="jumbotron">
+        <h1 class="display-3">@ViewData["Title"]</h1>
+        <h5 class="lead">At The House of The Rising Buns we are dedicated to providing you with a variety of recipes that you can cook at home! All with the help of our step by step instuctions!
+        We have tried to make our site as easy as possible for our users but just incase here are some instructions</h5>
+        <hr class="my-4">
+        <h5>If you need any extra assistance please don't hesitate to contact us!</h5>
+        <h5 class="lead">
+            <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Home" asp-action="Contact" role="button">Contact Us</a>
+        </h5>
+    </div>
+    @*Help content*@
+    <div class="container">
+        @*new row*@
+        <div class="row">
+            @*colum for help menu*@
+            <div class="col-md-4">
+                <ul class="list-group help-group">
+                    <div class="faq-list list-group nav nav-tabs">
+                        <a href="#tab1" class="list-group-item active" role="tab" data-toggle="tab">Frequently Asked Questions</a>
+                        <a href="#tab2" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-account-settings"></i> My account</a>
+                        <a href="#tab3" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-star"></i> Upload a Recipe</a>
+                        <a href="#tab4" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-cart"></i> Find a Recipe</a>
+
+                        @*admin only*@
+                       @if (User.IsInRole("Admins"))
+                       {
+                        <a href="#tab5" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-heart"></i> Manage Users</a>
+                        <a href="#tab6" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-check"></i>Adding and modifing Categorys and Recipes</a>
+                       }
+
+                    </div>
+                </ul>
+            </div>
+
+            <div class="col-md-8 help">
+                <div class="tab-content panels-faq">
+                    <div class="tab-pane active" id="tab1">
+                        <div class="panel-group" id="help-accordion-1">
+                            <div class="panel panel-default panel-help">
+                                <a href="#opret-produkt" data-toggle="collapse" data-parent="#help-accordion-1">
+                                    <div class="panel-heading">
+                                        <h2>How do I edit my profile?</h2>
+                                        <h4>If you would like to make changes to your profile you must first be logged in.</h4>
+                                        <h4>When you are logged in you will see your name displayed on the navigation bar simply click here and you will be taken to your profile. From here you can change your name, password and profile picture. Just click save when you are done! </h4>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="panel panel-default panel-help">
+                                <a href="#rediger-produkt" data-toggle="collapse" data-parent="#help-accordion-1">
+                                    <div class="panel-heading">
+                                        <h2>How do I upload a new Recipe?</h2>
+                                        <h4>If you would like to make changes to upload a recipe you must first be logged in, click register if you do not have an account.</h4>
+                                        <h4>Simply click the "Add a recipe" tab on the navigation bar and you will be taken to the upload form. From here you must fill in all fields, select a photo and a category. Just click save when you are done! </h4>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="panel panel-default panel-help">
+                                <a href="#ret-pris" data-toggle="collapse" data-parent="#help-accordion-1">
+                                    <div class="panel-heading">
+                                        <h2>How can I find a recipe?</h2>
+                                        <h4>You can either browse recipes using the "Browse Recipes" tab, the "Browse Categorys" tab or search directly through the search bar all located on the navigation bar,  </h4>
+                                    <ol>
+                                         <h4><li>Browse Recipes - Here you will find a collection of all recipes in our database</li></h4> 
+                                         <h4><li>Browse Categorys - Here you will find a collection of all recipes organized by their categorys</li></h4> 
+                                         <h4><li>Search Bar - Here you can search for a specific recipe. For example, "Apple Pie"</li></h4> 
+                                    </ol>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="panel panel-default panel-help">
+                                <a href="#slet-produkt" data-toggle="collapse" data-parent="#help-accordion-1">
+                                    <div class="panel-heading">
+                                        <h2>How do I Register</h2>
+                                        <h4>You can register by clicking the "register" link in the navigation bar, alternativly you can also click the link from the home page or follow the link from the log-in page</h4>
+                                        <h4>On the register page, simply fill in your email address and your chossen password in the field's provided and click register!</h4>
+                                    </div>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    @*tab 2*@
+                    <div class="tab-pane" id="tab2">
+                        <div class="panel-group" id="help-accordion-2">
+                            <div class="panel panel-default panel-help">
+                                <a href="#help-three" data-toggle="collapse" data-parent="#help-accordion-2">
+                                    <div class="panel-heading">
+                                        <h2>Your account</h2>
+                                    </div>
+                                </a>
+                                <div id="help-three">
+                                    <div class="panel-body">
+                                        <h4><hr />Initially, you will have to create an account before you can manage one. If you are not already logged in you should see a register link on the navigation bar, click here. You will then be redirected to the register form, please enter your email address and a password which you will need to confirm in the final text box also. Once done click register.
+You now have an account, if you want to edit this you must first be logged in. If you are logged in your display name (usually your email address) will be displayed in the navigation bar where the register link was originally. Click here and you will be directed to the manage page where you can change your details, password and profile image by filling out the form, just hit save when you are done.
+If you would like to log-out just hit log-out in the navigation bar.
+</h4>
+                                        @*<p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*tab 3*@
+                    <div class="tab-pane" id="tab3">
+                        <div class="panel-group" id="help-accordion-2">
+                            <div class="panel panel-default panel-help">
+                                <a href="#help-three" data-toggle="collapse" data-parent="#help-accordion-2">
+                                    <div class="panel-heading">
+                                        <h2>Upload a Recipe</h2>
+                                    </div>
+                                </a>
+                                <div id="help-three">
+                                    <div class="panel-body">
+                                        <h4><hr />To add a recipe simply click the “Add a Recipe” tab in the navigation bar, alternately there is also a link via the browse recipes page. Here you will be required to fill in all fields in addition to selecting an image that you want to represent the recipe, when you are done click save.
+Fields required include: -<hr/>
+                                            <ul>
+                                                <li> •	Title – type in your chosen name</li>
+                                                <li> •	Category – select the category that best describes this recipe from the dropdown box</li>
+                                                <li>•	Time – enter a cooking time in digital format HH:MM e.g. 00:10 for 10 mins.</li>
+                                                <li> •	Servings – enter a number of serving</li>
+                                                <li> •	Ingredients – list your ingredients (Don’t forget punctuation!)</li>
+                                                <li>•	Method – Explain the method (Don’t forget punctuation!)</li>
+                                                <li> •	Select an image – click “Choose File” then select an image from your device then click open.</li>
+                                            </ul>
+If you receive any red error messages just follow the instructions and try again!
+<h4/>
+                                        <hr/>
+                                        <p><strong>If you receive any red error messages just follow the instructions and try again!</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*tab 4*@
+                    <div class="tab-pane" id="tab4">
+                        <div class="panel-group" id="help-accordion-2">
+                            <div class="panel panel-default panel-help">
+                                <a href="#help-three" data-toggle="collapse" data-parent="#help-accordion-2">
+                                    <div class="panel-heading">
+                                        <h2>Find a Recipe</h2>
+                                    </div>
+                                </a>
+                                <div id="help-three">
+                                    <div class="panel-body">
+                                        <h4><hr />If you would like to a view a recipe you can firstly click “Browse Recipes” from the navigation bar. Here you can browse through all the available recipes if you see one that sounds good simply click the “Details” link beside the recipe and you will be taken to that recipe where you will find the full details.</h4>
+                                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+@if (User.IsInRole("Admins"))
+{
+
+                    <div class="tab-pane" id="tab5">
+                        <div class="panel-group" id="help-accordion-2">
+                            <div class="panel panel-default panel-help">
+                                <a href="#help-three" data-toggle="collapse" data-parent="#help-accordion-2">
+                                    <div class="panel-heading">
+                                        <h2>Manage Users</h2>
+                                    </div>
+                                </a>
+                                @* need to add correct class for cola *@
+                                <div id="help-three">
+                                    <div class="panel-body">
+                                        <h4><hr />To manage the users and the roles they are assigned to click on the “Admin” tab in the navigation bar. You will be taken to a page where you can see the roles that exist. To modify the Users within a certain role, select the “Edit” button in the actions column beside it.
+<br/>You will be taken to a page where you can select which users are included in this role. There are two rows: -<br />
+•	Add users to “This Role”<br />
+Tick the box beside the relevant user to add them to this group<br /><hr/>
+
+•	Remove users from “This Role”<br />
+Tick the box beside the relevant user to remove them from this group<br /><hr />
+
+Click “Save” button to save the changes or the “cancel” link to abort.<br /><hr />
+
+I have added an extra level of security to avoid the function of the application being compromised by any accidental deletions. For example, the authentication of the site depends on the
+“Admins” Role, therefore we not don’t want this role to be accidently deleted. At the same time adding extra roles is something I recommend a trained developer undertakes because their will have to be changes made in the code to provide permissions to these roles or they will just be the same as standard users anyway. To resolve this, I have created a new role called “Developers” users in this role will be included in the admins role as well.  They will gain access to everything an admin can except they will also have the option to create or delete roles via the Admin page using the two relevant buttons only visible to “Developers”.
+</h4>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*tab 6*@
+                    <div class="tab-pane" id="tab6">
+                        <div class="panel-group" id="help-accordion-2">
+                            <div class="panel panel-default panel-help">
+                                <a href="#help-three" data-toggle="collapse" data-parent="#help-accordion-2">
+                                    <div class="panel-heading">
+                                        <h2>Adding/Modifying Categorys and Recipes</h2>
+                                    </div>
+                                </a>
+                                <div id="help-three">
+                                    <div class="panel-body">
+                                        <h4><hr />Follow the instructions for viewing recipes, clicking “Browse Recipes”. Here you will be displayed the same layout as the users but have access to 2 new links that are only visible when logged in as an Admin: -
+<br/>•	Edit
+To edit a recipe, click this link, you will be taken to the same form used to add a recipe. Make any changes required and hit save when you are done.
+
+                                            <br />•	Delete
+To delete a recipe, click this link and confirm your choice at the warning box displayed.<hr/> <hr />
+                                        
+                                            To add a new category, you will need to be logged in as an admin, then click the “add a category” tab in the navigation bar.<br />
+                                            Enter the name of your new category and select the “Create” button when done.
+
+
+</h4>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*Newsletter*@
+    @await Html.PartialAsync("/Views/Shared/MailingList.cshtml")
+
+</body>
+</html>
+
+
+@*Javascript for faqs*@
+<script>
+    $(function () {
+        // Since there's no list-group/tab integration in Bootstrap
+        $('.list-group-item').on('click', function (e) {
+            var previous = $(this).closest(".list-group").children(".active");
+            previous.removeClass('active'); // previous list-item
+            $(e.target).addClass('active'); // activated list-item
+        });
+    });
+</script>
